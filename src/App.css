@@ -1,0 +1,174 @@
+/* Общие стили */
+body, html, .app {
+  margin: 0;
+  padding: 0;
+  font-family: 'Poppins', sans-serif;
+  background: #fffaf6;
+  color: #333;
+}
+
+/* Header */
+.header {
+  background: linear-gradient(90deg, #ff9ab8, #ffc6d2);
+  padding: 20px 50px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+  border-bottom-left-radius: 15px;
+  border-bottom-right-radius: 15px;
+}
+.header h1 {
+  margin: 0;
+  font-size: 28px;
+  color: white;
+  font-weight: 700;
+}
+.header nav a {
+  color: white;
+  margin: 0 15px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: 0.3s;
+}
+.header nav a:hover {
+  text-decoration: underline;
+}
+.header .cart {
+  background: #ff6f91;
+  padding: 8px 16px;
+  border-radius: 12px;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.3s;
+}
+.header .cart:hover {
+  background: #ff3d6f;
+}
+
+/* Main */
+.main {
+  padding: 50px 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+  text-align: center;
+}
+.main h2 {
+  font-size: 36px;
+  margin-bottom: 40px;
+  color: #ff4c82;
+  font-weight: 700;
+}
+.flower-detail {
+  display: flex;
+  gap: 30px;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.detail-img {
+  width: 300px;
+  border-radius: 20px;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.15);
+}
+
+.detail-info {
+  max-width: 400px;
+  text-align: left;
+}
+
+.detail-info h2 {
+  color: #ff4c82;
+  margin-bottom: 10px;
+}
+
+.back-link {
+  display: inline-block;
+  margin-top: 20px;
+  color: #ff6f91;
+  font-weight: 600;
+  text-decoration: none;
+}
+.back-link:hover {
+  text-decoration: underline;
+}
+
+
+/* Flower list */
+.flower-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+}
+.flower-card {
+  background: #fff;
+  border-radius: 20px;
+  width: 260px;
+  padding: 20px;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.12);
+  transition: transform 0.3s, box-shadow 0.3s;
+  cursor: pointer;
+}
+.flower-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 12px 28px rgba(0,0,0,0.18);
+}
+.flower-card img {
+  width: 100%;
+  border-radius: 15px;
+  margin-bottom: 15px;
+}
+.flower-card h3 {
+  margin: 10px 0 5px;
+  font-size: 22px;
+  color: #ff4c82;
+  font-weight: 600;
+}
+.flower-card .price {
+  font-weight: bold;
+  margin-bottom: 15px;
+  color: #333;
+}
+.flower-card button {
+  padding: 12px 18px;
+  background: #ff6f91;
+  border: none;
+  border-radius: 12px;
+  color: white;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.3s;
+}
+.flower-card button:hover {
+  background: #ff3d6f;
+}
+
+/* Footer */
+.footer {
+  text-align: center;
+  padding: 30px;
+  background: linear-gradient(90deg, #ffc6d2, #ff9ab8);
+  color: white;
+  font-weight: 600;
+  margin-top: 50px;
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+}
+
+/* Адаптив */
+@media (max-width: 768px) {
+  .flower-list {
+    flex-direction: column;
+    align-items: center;
+  }
+  .header {
+    flex-direction: column;
+    gap: 10px;
+  }
+}
