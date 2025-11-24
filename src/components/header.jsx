@@ -1,16 +1,17 @@
-import React from "react";
-import { Link } from "react-router-dom";
-
-function Headers({ cart }) {
+export default function Headers({ user, cart, onLogout }) {
   return (
     <header className="header">
-      <h1>Цветочный магазин</h1>
+      <div className="logo">🌸 Flower Shop</div>
       <nav>
-        <Link to="/">Главная</Link>
-        <Link to="/cart">Корзина ({cart.length})</Link>
+        <a href="/">Главная</a>
+        <a href="/cart">Корзина ({cart.length})</a>
+        <a href="/favorites">Избранное</a>
+        {user && (
+          <button onClick={onLogout} className="btn-logout">
+            Выйти
+          </button>
+        )}
       </nav>
     </header>
   );
 }
-
-export default Headers;

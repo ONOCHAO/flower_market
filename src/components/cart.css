@@ -1,0 +1,170 @@
+/* cart.css */
+
+/* --- Глобальные настройки --- */
+* {
+  box-sizing: border-box;
+}
+
+body, html {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden; /* Убираем горизонтальный скролл */
+  font-family: Arial, sans-serif;
+}
+
+/* Общий фон страницы */
+.flowers-page {
+  width: 100%;
+  min-height: 100vh;
+  background: #f7f7fa;
+  padding: 100px 20px 60px 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Верхний блок */
+.hero {
+  text-align: center;
+  padding: 60px 20px;
+  background: linear-gradient(to bottom right, #ffe6f0, #ffffff);
+  margin-bottom: 50px;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.05);
+  border-radius: 18px;
+  width: 100%;
+  max-width: 1400px;
+}
+
+.hero-title {
+  font-size: 42px;
+  font-weight: 700;
+  color: #333;
+}
+
+.hero-subtitle {
+  font-size: 18px;
+  margin-top: 10px;
+  color: #666;
+}
+
+/* Сообщение о пустой корзине */
+.empty-cart {
+  text-align: center;
+  color: #777;
+  font-size: 16px;
+  margin-top: 50px;
+}
+
+/* Сетка карточек */
+.flowers-grid {
+  width: 100%;
+  max-width: 1400px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 30px;
+  justify-items: center;
+  margin: 0 auto;
+}
+
+/* Карточки */
+.flower-card {
+  background: white;
+  border-radius: 18px;
+  padding-bottom: 15px;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.1);
+  transition: 0.25s ease-in-out;
+  align-items: center;
+}
+
+.flower-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.12);
+}
+
+/* Фото */
+.flower-image-wrapper {
+  width: 100%;
+  height: 210px;
+  overflow: hidden;
+}
+
+.flower-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Контент карточки */
+.flower-content {
+  padding: 15px 18px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  width: 100%;
+}
+
+.flower-content h3 {
+  font-size: 18px;
+  margin-bottom: 6px;
+}
+
+.flower-description {
+  font-size: 14px;
+  color: #777;
+  min-height: 45px;
+}
+
+/* Нижняя часть карточки */
+.flower-footer {
+  margin-top: 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  width: 100%;
+}
+
+/* Цена */
+.flower-price {
+  font-size: 20px;
+  font-weight: bold;
+  color: #e95fa4;
+  flex-shrink: 0;
+}
+
+/* Кнопка */
+.btn-buy {
+  background: #5cb85c;
+  border: none;
+  color: white;
+  padding: 8px 14px;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.btn-buy:hover {
+  background: #4ca64c;
+}
+
+/* Итоговая сумма */
+.order-summary {
+  max-width: 1400px;
+  margin: 40px auto 60px;
+  padding: 0 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  flex-wrap: wrap; /* чтобы кнопка не вылазила на узких экранах */
+}
+
+.order-btn {
+  background-color: #5cb85c;
+  padding: 12px 20px;
+  font-size: 16px;
+}
